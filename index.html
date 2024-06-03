@@ -1,26 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Mi Página</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Estado de Semáforos</title>
 </head>
 <body>
-    <header>
-        <h1>Bienvenidos a Mi Página</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Inicio</a></li>
-                <li><a href="#about">Acerca de</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section>
-        <h2>Sobre Nosotros</h2>
-        <p>Esta es la sección principal del cuerpo del sitio web.</p>
-        <p>Aquí puedes agregar más contenido sobre tu página.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Mi Página. Todos los derechos reservados.</p>
-    </footer>
+    <h1>Administrar Estado de Semáforos</h1>
+    <form action="/administrar_semaforos" method="POST">
+        <div>
+            <label for="semaforo_id">ID del Semáforo:</label>
+            <input type="text" id="semaforo_id" name="semaforo_id" required>
+        </div>
+        <div>
+            <label for="latitud">Latitud:</label>
+            <input type="number" step="any" id="latitud" name="latitud" required>
+        </div>
+        <div>
+            <label for="longitud">Longitud:</label>
+            <input type="number" step="any" id="longitud" name="longitud" required>
+        </div>
+        <div>
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="bueno">Bueno</option>
+                <option value="malo">Malo</option>
+            </select>
+        </div>
+        <div id="problema_div" style="display:none;">
+            <label for="problema">Descripción del Problema:</label>
+            <input type="text" id="problema" name="problema">
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        const estadoSelect = document.getElementById('estado');
+        const problemaDiv = document.getElementById('problema_div');
+
+        estadoSelect.addEventListener('change', function() {
+            if (estadoSelect.value === 'malo') {
+                problemaDiv.style.display = 'block';
+            } else {
+                problemaDiv.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
