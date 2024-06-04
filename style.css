@@ -1,3 +1,4 @@
+/* Estilos para el encabezado */
 header {
     background-color: #333;
     color: white;
@@ -48,3 +49,7 @@ nav ul .submenu li a {
 nav ul li:hover .submenu {
     display: block;
 }
+
+/* Estilos para el cuerpo del documento */
+body {
+    font-family: Arial, sans
