@@ -1,4 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCM Status</title>
+    <link rel="stylesheet" href="css/header.css">
+</head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a>
+                    <ul class="submenu">
+                        <li><a href="#">Consultoría</a></li>
+                        <li><a href="#">Mantenimiento</a></li>
+                        <li><a href="#">Instalación</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+  
     <h1>Administrar Estado de Semáforos</h1>
     <form action="/administrar_semaforos" method="POST">
         <div>
@@ -26,27 +51,29 @@
         </div>
         <button type="submit">Enviar</button>
     </form>
+
+    <footer class="footer-container">
+        <div class="footer-logo">
+            <img src="logo.png" alt="TCM Status">
+        </div>
+        <div class="footer-content">
+            <h2>Sobre TCM Status </h2>
+            <p>TCM Status es un app web que ayuda en la gestión de la información de los semáforos según su estado de funcionamiento</p>
+        </div>
+        <div class="footer-seccion contact">
+            <h2>Contactanos</h2>
+            <p>Teléfono: +57 300 555 5555</p>
+            <p>Correo: <a href="mailto:">ejemplo@correo.com</a></p>
+        </div>
+        <div class="footer-botton">
+            <h2>Redes Sociales</h2>
+            <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" alt="instagram"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="twitter.png" alt="twitter"></a>
+        </div>
+        <div class="footer-copyright">
+            <p>Copyright &copy; 2021 TCM Status</p>
+        </div>
+    </footer>
 </body>
-<footer class="footer-container">
-    <div class="footer-logo">
-        <img src="logo.png" alt="TCM Status">
-    </div>
-    <div class="footer-content">
-        <h2>Sobre TCM Status </h2>
-        <p>TCM Status es un app web que ayuda en la gestión de la información de los semáforos según su estado de funcionamiento</p>
-    </div>
-    <div class="footer-seccion contact">
-        <h2>Contactanos</h2>
-        <p>Teléfono: +57 300 555 5555</p>
-        <p>Correo: <a href="mailto:">ejemplo@correo.com</a></p>
-    </div>
-    <div class="footer-botton">
-        <h2>Redes Sociales</h2>
-        <a href="https://www.facebook.com/" target="_blank"><img src="facebook.png" alt="facebook"></a>
-        <a href="https://www.instagram.com/" target="_blank"><img src="instagram.png" alt="instagram"></a>
-        <a href="https://www.twitter.com/" target="_blank"><img src="twitter.png" alt="twitter"></a>
-    </div>
-    <div class="footer-copyright">
-        <p>Copyright &copy; 2021 TCM Status</p>
-    </div>
-</footer>
+</html>
