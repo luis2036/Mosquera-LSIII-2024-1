@@ -1,0 +1,40 @@
+<body>
+    <h1>Administrar Estado de Semáforos</h1>
+    <form action="/administrar_semaforos" method="POST">
+        <div>
+            <label for="semaforo_id">ID del Semáforo:</label>
+            <input type="text" id="semaforo_id" name="semaforo_id" required>
+        </div>
+        <div>
+            <label for="latitud">Latitud:</label>
+            <input type="number" step="any" id="latitud" name="latitud" required>
+        </div>
+        <div>
+            <label for="longitud">Longitud:</label>
+            <input type="number" step="any" id="longitud" name="longitud" required>
+        </div>
+        <div>
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+                <option value="bueno">Bueno</option>
+                <option value="malo">Malo</option>
+            </select>
+        </div>
+        <div id="problema_div" style="display:none;">
+            <label for="problema">Descripción del Problema:</label>
+            <input type="text" id="problema" name="problema">
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('estado').addEventListener('change', function() {
+            const problemaDiv = document.getElementById('problema_div');
+            if (this.value === 'malo') {
+                problemaDiv.style.display = 'block';
+            } else {
+                problemaDiv.style.display = 'none';
+            }
+        });
+    </script>
+</body>
