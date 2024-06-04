@@ -28,11 +28,9 @@
     </form>
 
     <script>
-        const estadoSelect = document.getElementById('estado');
-        const problemaDiv = document.getElementById('problema_div');
-
-        estadoSelect.addEventListener('change', function() {
-            if (estadoSelect.value === 'malo') {
+        document.getElementById('estado').addEventListener('change', function() {
+            const problemaDiv = document.getElementById('problema_div');
+            if (this.value === 'malo') {
                 problemaDiv.style.display = 'block';
             } else {
                 problemaDiv.style.display = 'none';
@@ -40,4 +38,3 @@
         });
     </script>
 </body>
-
